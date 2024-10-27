@@ -1,0 +1,15 @@
+{
+	"name": "IntroText",
+	"plugin-id": "Text",
+	"sid": 478839276816750,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 123258363127662
+		}
+	],
+	"effectTypes": []
+}

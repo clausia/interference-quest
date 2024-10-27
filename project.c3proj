@@ -1,0 +1,481 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 40702,
+	"name": "Interference Quest",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Arr",
+			"name": "Array",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "sliderbar",
+			"name": "Slider bar",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Platform",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "skymen_RoundedSquareMask",
+			"name": "Rounded Square Mask",
+			"author": "skymen",
+			"bundled": false,
+			"version": "1.0.0.2"
+		}
+	],
+	"uniqueId": "x4vqrcn7l3b",
+	"objectTypes": {
+		"items": [
+			"line",
+			"f1",
+			"Array",
+			"f2",
+			"amplitude_f1",
+			"phase_f1",
+			"Text",
+			"amplitude_f2",
+			"phase_f2",
+			"f1_plus_f2",
+			"ResetBtn",
+			"hide_wave",
+			"amp1",
+			"amp2",
+			"phase1",
+			"phase2",
+			"nanobot",
+			"zone_controls",
+			"make_solid",
+			"Keyboard",
+			"change_level",
+			"backgrounf_level_",
+			"bridge2",
+			"backgrounf_level_2",
+			"timer",
+			"f_attack",
+			"f_defense",
+			"Text2",
+			"f_result",
+			"Text3",
+			"txt_next_attack",
+			"amplitude_defense",
+			"phase_defense",
+			"frequency_defense",
+			"Text5",
+			"Text6",
+			"Text7",
+			"Text8",
+			"Text9",
+			"console",
+			"attack",
+			"txt_amplitude_defense",
+			"txt_phase_defense",
+			"txt_frequency_defense",
+			"TiledBackground2",
+			"TiledBackground4",
+			"mouse",
+			"exit",
+			"Text10",
+			"txt_attack_energy",
+			"txt_count_attacks",
+			"Text11",
+			"txt_after_interf_energy",
+			"txt_attack_amplitude",
+			"txt_attack_frequency",
+			"txt_attack_phase",
+			"Text12",
+			"txt_interference_ampltude",
+			"txt_interference_frequency",
+			"txt_interference_phase",
+			"tardigrade",
+			"Audio",
+			"power_bar_bar",
+			"power_bar_frame",
+			"Text13",
+			"txt_bot_energy",
+			"DefendBtn",
+			"bridge",
+			"txt_level_failed"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"angstromintro",
+					"StartButton",
+					"tardigradeintro",
+					"textintrobg",
+					"IntroText",
+					"TiledBackground3"
+				],
+				"subfolders": [],
+				"name": "intro"
+			},
+			{
+				"items": [
+					"L1infoBg",
+					"L1infoBtn",
+					"L1infoClose",
+					"L1infoTxt",
+					"L1instructionsBg",
+					"L1instructionsBtn",
+					"L1instructionsClose",
+					"L1instructionsTxt",
+					"L1storyBg",
+					"L1storyBtn",
+					"L1storyClose",
+					"L1storyText"
+				],
+				"subfolders": [],
+				"name": "level_1_texts_objects"
+			},
+			{
+				"items": [
+					"background_ending",
+					"textending_background",
+					"text_ending",
+					"restart"
+				],
+				"subfolders": [],
+				"name": "ending"
+			}
+		]
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"level_1",
+			"level_2",
+			"intro",
+			"ending"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"level_1_event",
+			"level_2_event",
+			"IntroEvents",
+			"endind_event"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [
+				{
+					"name": "music-intro.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 760569101909872,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "music_level1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 511212529671417,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "music_level2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 882036932658787,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "music_ending.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 362410313602433,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "attack.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 394201178885168,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"music": {
+			"items": [
+				{
+					"name": "interference_quest _introduction.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 363249334317143,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "interference_quest _level_1_story.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 687759964067556,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "interference_quest _level_2_story.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 479747844645793,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "interference_quest_ending.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 823583365854198,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 700010091003155,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 883828903263152,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 449510981075378,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 144762538250408,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 436585451498548,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 175906544278641,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 115621429095266,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [
+			"Timeline 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"flowcharts": {
+		"items": [],
+		"subfolders": []
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": true,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"autoReloadScriptsOnPreview": false,
+		"exportFileStructure": "folders",
+		"uidAllocationMode": "random"
+	},
+	"viewportWidth": 854,
+	"viewportHeight": 480,
+	"firstLayout": "intro"
+}

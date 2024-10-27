@@ -1,0 +1,1949 @@
+{
+	"name": "level_1_event",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "centerX",
+			"type": "number",
+			"initialValue": "427",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 754332681622175
+		},
+		{
+			"eventType": "variable",
+			"name": "centerY",
+			"type": "number",
+			"initialValue": "345",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 190719110276369
+		},
+		{
+			"eventType": "variable",
+			"name": "unitPixels",
+			"type": "number",
+			"initialValue": "20",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 334200018449758
+		},
+		{
+			"eventType": "variable",
+			"name": "showText",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 564967204716943
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 247952858908451
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "f1",
+					"sid": 184100206360468
+				},
+				{
+					"id": "destroy",
+					"objectClass": "f2",
+					"sid": 995874058792432
+				},
+				{
+					"id": "destroy",
+					"objectClass": "f1_plus_f2",
+					"sid": 210747755089197
+				},
+				{
+					"callFunction": "toggleStory",
+					"sid": 736107663439093
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 382538151368511,
+					"parameters": {
+						"audio-file": "interference_quest _level_1_story",
+						"loop": "not-looping",
+						"volume": "5",
+						"stereo-pan": "0",
+						"tag-optional": "\"level1_story_speech\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 544711074274594,
+					"parameters": {
+						"audio-file": "music_level1",
+						"loop": "looping",
+						"volume": "-20",
+						"stereo-pan": "0",
+						"tag-optional": "\"music_level1\""
+					}
+				}
+			],
+			"sid": 577973318911653,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 893224367658994,
+							"parameters": {
+								"name": "\"i\"",
+								"start-index": "-427",
+								"end-index": "427"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "plotting",
+							"sid": 483200368650835,
+							"parameters": [
+								"loopindex(\"i\")"
+							]
+						}
+					],
+					"sid": 420364087179075
+				}
+			]
+		},
+		{
+			"functionName": "plotting",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "index",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 855858290200733
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"callFunction": "func1",
+					"sid": 292996138148382,
+					"parameters": [
+						"index"
+					]
+				},
+				{
+					"callFunction": "func2",
+					"sid": 311717807149402,
+					"parameters": [
+						"index"
+					]
+				},
+				{
+					"callFunction": "func1_plus_func2",
+					"sid": 429923692863163,
+					"parameters": [
+						"index"
+					]
+				}
+			],
+			"sid": 569695134942809
+		},
+		{
+			"functionName": "func1",
+			"functionDescription": "wave1",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "x",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 593992342754232
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 258423625316925,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "y",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 852783354571274
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 675054649136225,
+							"parameters": {
+								"variable": "y",
+								"value": "(cos (x + phase_f1.Value)) * unitPixels * amplitude_f1.Value"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 306564395392636,
+							"parameters": {
+								"object-to-create": "f1",
+								"layer": "\"func1\"",
+								"x": "x + centerX",
+								"y": "-y + centerY",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 224274297320610
+				}
+			]
+		},
+		{
+			"functionName": "func2",
+			"functionDescription": "wave1",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "x",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 618991058612248
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 737887425092474,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "y",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 749565721801122
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 766774786835171,
+							"parameters": {
+								"variable": "y",
+								"value": "(sin (x + phase_f2.Value)) * unitPixels * amplitude_f2.Value"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 586645070030734,
+							"parameters": {
+								"object-to-create": "f2",
+								"layer": "\"func2\"",
+								"x": "x + centerX",
+								"y": "-y + centerY",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 811464999025022
+				}
+			]
+		},
+		{
+			"functionName": "func1_plus_func2",
+			"functionDescription": "wave1",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "x",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 254771979631720
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 850645989688381,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "y",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 788918638734738
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 292602940519363,
+							"parameters": {
+								"variable": "y",
+								"value": "(cos (x + phase_f1.Value)) * unitPixels * amplitude_f1.Value + (sin (x + phase_f2.Value)) * unitPixels * amplitude_f2.Value"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 259322246673220,
+							"parameters": {
+								"object-to-create": "f1_plus_f2",
+								"layer": "\"f1_plus_f2\"",
+								"x": "x + centerX",
+								"y": "-y + centerY",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 385581551217104
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-changing",
+					"objectClass": "amplitude_f1",
+					"sid": 565728425087036
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "f1",
+					"sid": 666517974106254
+				},
+				{
+					"id": "destroy",
+					"objectClass": "f1_plus_f2",
+					"sid": 722861430810041
+				}
+			],
+			"sid": 151679909084153,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 940945988650191,
+							"parameters": {
+								"name": "\"i\"",
+								"start-index": "-427",
+								"end-index": "427"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "func1",
+							"sid": 160256797170144,
+							"parameters": [
+								"loopindex(\"i\")"
+							]
+						},
+						{
+							"callFunction": "func1_plus_func2",
+							"sid": 492966096683480,
+							"parameters": [
+								"loopindex(\"i\")"
+							]
+						},
+						{
+							"id": "set-text",
+							"objectClass": "amp1",
+							"sid": 809748249696018,
+							"parameters": {
+								"text": "amplitude_f1.Value"
+							}
+						}
+					],
+					"sid": 719067116132238
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-changed",
+					"objectClass": "amplitude_f1",
+					"sid": 727445132879656
+				}
+			],
+			"actions": [
+				{
+					"id": "set-unfocused",
+					"objectClass": "amplitude_f1",
+					"sid": 931588944351604
+				}
+			],
+			"sid": 762066532310442
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-changing",
+					"objectClass": "phase_f1",
+					"sid": 532790361079249
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "f1",
+					"sid": 844716948146737
+				},
+				{
+					"id": "destroy",
+					"objectClass": "f1_plus_f2",
+					"sid": 204242280579263
+				}
+			],
+			"sid": 996518067268681,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 971878065402492,
+							"parameters": {
+								"name": "\"i\"",
+								"start-index": "-427",
+								"end-index": "427"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "func1",
+							"sid": 199412053685380,
+							"parameters": [
+								"loopindex(\"i\")"
+							]
+						},
+						{
+							"callFunction": "func1_plus_func2",
+							"sid": 135370863469818,
+							"parameters": [
+								"loopindex(\"i\")"
+							]
+						},
+						{
+							"id": "set-text",
+							"objectClass": "phase1",
+							"sid": 834225124312097,
+							"parameters": {
+								"text": "str(phase_f1.Value) & \"° = \" & str(round((phase_f1.Value/180)*100)/100) & \"π\""
+							}
+						}
+					],
+					"sid": 993428119855004
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-changed",
+					"objectClass": "phase_f1",
+					"sid": 996662452273066
+				}
+			],
+			"actions": [
+				{
+					"id": "set-unfocused",
+					"objectClass": "phase_f1",
+					"sid": 200215814649722
+				}
+			],
+			"sid": 410493279535118
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-changing",
+					"objectClass": "amplitude_f2",
+					"sid": 154706322239190
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "f2",
+					"sid": 302558864593937
+				},
+				{
+					"id": "destroy",
+					"objectClass": "f1_plus_f2",
+					"sid": 345351629246251
+				}
+			],
+			"sid": 406557724263748,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 693224176410834,
+							"parameters": {
+								"name": "\"i\"",
+								"start-index": "-427",
+								"end-index": "427"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "func2",
+							"sid": 175548438085109,
+							"parameters": [
+								"loopindex(\"i\")"
+							]
+						},
+						{
+							"callFunction": "func1_plus_func2",
+							"sid": 561217864486365,
+							"parameters": [
+								"loopindex(\"i\")"
+							]
+						},
+						{
+							"id": "set-text",
+							"objectClass": "amp2",
+							"sid": 254959262465628,
+							"parameters": {
+								"text": "amplitude_f2.Value"
+							}
+						}
+					],
+					"sid": 464350817417187
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-changed",
+					"objectClass": "amplitude_f2",
+					"sid": 139845342038342
+				}
+			],
+			"actions": [
+				{
+					"id": "set-unfocused",
+					"objectClass": "amplitude_f2",
+					"sid": 590089076089551
+				}
+			],
+			"sid": 700092107596251
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-changing",
+					"objectClass": "phase_f2",
+					"sid": 913312553159711
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "f2",
+					"sid": 495589413946269
+				},
+				{
+					"id": "destroy",
+					"objectClass": "f1_plus_f2",
+					"sid": 855918002414116
+				}
+			],
+			"sid": 871988851572479,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 994200700443174,
+							"parameters": {
+								"name": "\"i\"",
+								"start-index": "-427",
+								"end-index": "427"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "func2",
+							"sid": 225380456524521,
+							"parameters": [
+								"loopindex(\"i\")"
+							]
+						},
+						{
+							"callFunction": "func1_plus_func2",
+							"sid": 132798477574552,
+							"parameters": [
+								"loopindex(\"i\")"
+							]
+						},
+						{
+							"id": "set-text",
+							"objectClass": "phase2",
+							"sid": 386529570783963,
+							"parameters": {
+								"text": "str(phase_f2.Value) & \"° = \" & str(round((phase_f2.Value/180)*100)/100) & \"π\""
+							}
+						}
+					],
+					"sid": 244014076416930
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-changed",
+					"objectClass": "phase_f2",
+					"sid": 555704644140205
+				}
+			],
+			"actions": [
+				{
+					"id": "set-unfocused",
+					"objectClass": "phase_f2",
+					"sid": 160518520582838
+				}
+			],
+			"sid": 202416401443056
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "ResetBtn",
+					"sid": 189550160515886
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "f1",
+					"sid": 775516642426521
+				},
+				{
+					"id": "destroy",
+					"objectClass": "f2",
+					"sid": 556731663747846
+				},
+				{
+					"id": "destroy",
+					"objectClass": "f1_plus_f2",
+					"sid": 333261639484549
+				},
+				{
+					"id": "set-value",
+					"objectClass": "amplitude_f1",
+					"sid": 162699917715024,
+					"parameters": {
+						"value": "2.5"
+					}
+				},
+				{
+					"id": "set-value",
+					"objectClass": "amplitude_f2",
+					"sid": 924289609806210,
+					"parameters": {
+						"value": "2.5"
+					}
+				},
+				{
+					"id": "set-value",
+					"objectClass": "phase_f1",
+					"sid": 170778760528925,
+					"parameters": {
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-value",
+					"objectClass": "phase_f2",
+					"sid": 275943932490149,
+					"parameters": {
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "nanobot",
+					"sid": 506762940822880,
+					"parameters": {
+						"x": "65",
+						"y": "139"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "tardigrade",
+					"sid": 931079334803497,
+					"parameters": {
+						"x": "17",
+						"y": "170"
+					}
+				},
+				{
+					"id": "set-unfocused",
+					"objectClass": "ResetBtn",
+					"sid": 438813828218976
+				},
+				{
+					"id": "set-unfocused",
+					"objectClass": "L1instructionsBtn",
+					"sid": 789210734354185
+				},
+				{
+					"id": "set-unfocused",
+					"objectClass": "L1storyBtn",
+					"sid": 141945070607470
+				},
+				{
+					"id": "set-unfocused",
+					"objectClass": "L1infoBtn",
+					"sid": 504410173847742
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "L1storyText",
+					"sid": 733093688814421,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "L1storyClose",
+					"sid": 485333693690252,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "L1storyBg",
+					"sid": 802981710386516,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "L1instructionsTxt",
+					"sid": 161763038648660,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "L1instructionsClose",
+					"sid": 720990908007577,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "L1instructionsBg",
+					"sid": 894742671947146,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "L1infoTxt",
+					"sid": 105491268263375,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "L1infoClose",
+					"sid": 819360453108614,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "L1infoBg",
+					"sid": 181090112813342,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "L1storyBtn",
+					"sid": 684058445720112,
+					"parameters": {
+						"mode": "enabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "L1instructionsBtn",
+					"sid": 101150881389142,
+					"parameters": {
+						"mode": "enabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "L1infoBtn",
+					"sid": 209742519987180,
+					"parameters": {
+						"mode": "enabled"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 777339117390008,
+					"parameters": {
+						"variable": "showText",
+						"value": "false"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 695253129335529,
+					"parameters": {
+						"tag": "\"level1_story_speech\""
+					}
+				}
+			],
+			"sid": 506447560676199,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 876941136996681,
+							"parameters": {
+								"name": "\"i\"",
+								"start-index": "-427",
+								"end-index": "427"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "plotting",
+							"sid": 169216249545353,
+							"parameters": [
+								"loopindex(\"i\")"
+							]
+						}
+					],
+					"sid": 303660454499150
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 498035196820234
+				}
+			],
+			"actions": [],
+			"sid": 152536764801327,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "f1_plus_f2",
+							"sid": 633125685364431,
+							"parameters": {
+								"object": "make_solid"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "f1_plus_f2",
+							"sid": 124002185015870,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 536615564341887
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "f1_plus_f2",
+							"sid": 352594263156328,
+							"parameters": {
+								"object": "hide_wave"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "f1_plus_f2",
+							"sid": 621403519967383
+						}
+					],
+					"sid": 100734181536027
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 763621927014116,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "nanobot",
+					"sid": 669775878073151,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "nanobot",
+					"sid": 101264896313823,
+					"parameters": {
+						"animation": "\"Walk\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "tardigrade",
+					"sid": 137193719832282,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "tardigrade",
+					"sid": 186859730683137,
+					"parameters": {
+						"animation": "\"Walk\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 102732812263786
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 507037095625394,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "nanobot",
+					"sid": 118469686388317,
+					"parameters": {
+						"state": "mirrored"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "nanobot",
+					"sid": 367904354068894,
+					"parameters": {
+						"animation": "\"Walk\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "tardigrade",
+					"sid": 883582184991208,
+					"parameters": {
+						"state": "mirrored"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "tardigrade",
+					"sid": 309773419692859,
+					"parameters": {
+						"animation": "\"Walk\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 428177317006620
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-speed",
+					"objectClass": "nanobot",
+					"sid": 770726327214242,
+					"behaviorType": "Platform",
+					"parameters": {
+						"comparison": 0,
+						"speed": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "nanobot",
+					"sid": 476699373363003,
+					"parameters": {
+						"animation": "\"Idle\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "tardigrade",
+					"sid": 187231759730651,
+					"parameters": {
+						"animation": "\"Idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 462292698008628
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "nanobot",
+					"sid": 205133790210733,
+					"parameters": {
+						"comparison": 3,
+						"x-co-ordinate": "20"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "nanobot",
+					"sid": 150598051120224,
+					"parameters": {
+						"x": "20"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "tardigrade",
+					"sid": 206589812916203,
+					"parameters": {
+						"x": "-30"
+					}
+				}
+			],
+			"sid": 619105054715295
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "nanobot",
+					"sid": 706149823754960,
+					"parameters": {
+						"object": "change_level"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 150193816272809,
+					"parameters": {
+						"layout": "level_2"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 867785481266017,
+					"parameters": {
+						"tag": "\"music_level1\""
+					}
+				}
+			],
+			"sid": 887174609278977
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-falling",
+					"objectClass": "nanobot",
+					"sid": 172866799845586,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "amplitude_f1",
+					"sid": 563893093681249,
+					"parameters": {
+						"mode": "disabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "amplitude_f2",
+					"sid": 404147638981499,
+					"parameters": {
+						"mode": "disabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "phase_f1",
+					"sid": 634807452066495,
+					"parameters": {
+						"mode": "disabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "phase_f2",
+					"sid": 696406857992494,
+					"parameters": {
+						"mode": "disabled"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "nanobot",
+					"sid": 141261568658977,
+					"parameters": {
+						"animation": "\"Falling\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 411009868142809
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-falling",
+					"objectClass": "tardigrade",
+					"sid": 876959811175507,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "tardigrade",
+					"sid": 207418088884375,
+					"parameters": {
+						"animation": "\"Falling\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 376109517603104
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-floor",
+					"objectClass": "nanobot",
+					"sid": 458547713429437,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "amplitude_f1",
+					"sid": 298719274826717,
+					"parameters": {
+						"mode": "enabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "amplitude_f2",
+					"sid": 538539108221054,
+					"parameters": {
+						"mode": "enabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "phase_f1",
+					"sid": 839378013212718,
+					"parameters": {
+						"mode": "enabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "phase_f2",
+					"sid": 589679098375840,
+					"parameters": {
+						"mode": "enabled"
+					}
+				}
+			],
+			"sid": 926100162051339
+		},
+		{
+			"functionName": "toggleStory",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "L1storyBg",
+					"sid": 279041482514700,
+					"parameters": {
+						"visibility": "toggle"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "L1storyClose",
+					"sid": 991142988342618,
+					"parameters": {
+						"visibility": "toggle"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "L1storyText",
+					"sid": 913206725148277,
+					"parameters": {
+						"visibility": "toggle"
+					}
+				}
+			],
+			"sid": 326288111175305,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 250989213567561,
+							"parameters": {
+								"variable": "showText"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "L1instructionsBtn",
+							"sid": 981675943198030,
+							"parameters": {
+								"mode": "enabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "L1infoBtn",
+							"sid": 464881767432029,
+							"parameters": {
+								"mode": "enabled"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 532591127156023,
+							"parameters": {
+								"variable": "showText",
+								"value": "false"
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 557600256778670,
+							"parameters": {
+								"tag": "\"level1_story_speech\""
+							}
+						},
+						{
+							"id": "set-unfocused",
+							"objectClass": "L1storyBtn",
+							"sid": 279649308416168
+						}
+					],
+					"sid": 314129077816565
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 674810266099855
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 490185280259313,
+							"parameters": {
+								"variable": "showText",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "L1instructionsBtn",
+							"sid": 374892792427263,
+							"parameters": {
+								"mode": "disabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "L1infoBtn",
+							"sid": 473327796114711,
+							"parameters": {
+								"mode": "disabled"
+							}
+						}
+					],
+					"sid": 384623367542504
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 851175298635680
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "L1storyBtn",
+					"sid": 895732451653381
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "toggleStory",
+					"sid": 471516362056809
+				}
+			],
+			"sid": 818188737739524
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "mouse",
+					"sid": 576035457071586,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "L1storyClose"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "L1storyText",
+					"sid": 951443164757952,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "L1storyClose",
+					"sid": 979029579007210,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "L1storyBg",
+					"sid": 778425183009627,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "L1instructionsBtn",
+					"sid": 666792109475559,
+					"parameters": {
+						"mode": "enabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "L1infoBtn",
+					"sid": 724546249754700,
+					"parameters": {
+						"mode": "enabled"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 238589113276765,
+					"parameters": {
+						"variable": "showText",
+						"value": "false"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 222640230791898,
+					"parameters": {
+						"tag": "\"level1_story_speech\""
+					}
+				}
+			],
+			"sid": 631085148295246
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "L1instructionsBtn",
+					"sid": 307580989912846
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "L1storyBtn",
+					"sid": 947551928403898,
+					"parameters": {
+						"mode": "disabled"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "L1instructionsBg",
+					"sid": 771722665066360,
+					"parameters": {
+						"visibility": "toggle"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "L1instructionsClose",
+					"sid": 606681927672180,
+					"parameters": {
+						"visibility": "toggle"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "L1instructionsTxt",
+					"sid": 646248529135405,
+					"parameters": {
+						"visibility": "toggle"
+					}
+				},
+				{
+					"id": "set-unfocused",
+					"objectClass": "L1instructionsBtn",
+					"sid": 193898173488399
+				}
+			],
+			"sid": 501414632263639,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 241766332452017,
+							"parameters": {
+								"variable": "showText"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "L1storyBtn",
+							"sid": 481418263630336,
+							"parameters": {
+								"mode": "enabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "L1infoBtn",
+							"sid": 277064187265637,
+							"parameters": {
+								"mode": "enabled"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 255249189787765,
+							"parameters": {
+								"variable": "showText",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 670100760786061
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 186105695597890
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 595622155179096,
+							"parameters": {
+								"variable": "showText",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "L1storyBtn",
+							"sid": 733499480864073,
+							"parameters": {
+								"mode": "disabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "L1infoBtn",
+							"sid": 666280387695367,
+							"parameters": {
+								"mode": "disabled"
+							}
+						}
+					],
+					"sid": 301907171069740
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "mouse",
+					"sid": 367390738245206,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "L1instructionsClose"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "L1instructionsTxt",
+					"sid": 289893640290946,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "L1instructionsClose",
+					"sid": 626726143938430,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "L1instructionsBg",
+					"sid": 807332339505969,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "L1storyBtn",
+					"sid": 705372072537093,
+					"parameters": {
+						"mode": "enabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "L1infoBtn",
+					"sid": 723569764664080,
+					"parameters": {
+						"mode": "enabled"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 579962130797352,
+					"parameters": {
+						"variable": "showText",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 625076303352722
+		},
+		{
+			"functionName": "toggleInfo",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "L1infoBg",
+					"sid": 110756704065943,
+					"parameters": {
+						"visibility": "toggle"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "L1infoClose",
+					"sid": 547719982903158,
+					"parameters": {
+						"visibility": "toggle"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "L1infoTxt",
+					"sid": 408708340413107,
+					"parameters": {
+						"visibility": "toggle"
+					}
+				},
+				{
+					"id": "set-unfocused",
+					"objectClass": "L1infoBtn",
+					"sid": 908989093342654
+				}
+			],
+			"sid": 127307317300922
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "L1infoBtn",
+					"sid": 644691293344280
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "toggleInfo",
+					"sid": 639883431373197
+				}
+			],
+			"sid": 651272604713504,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 348193236289301,
+							"parameters": {
+								"variable": "showText"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "L1storyBtn",
+							"sid": 462443456316985,
+							"parameters": {
+								"mode": "enabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "L1instructionsBtn",
+							"sid": 749124991963746,
+							"parameters": {
+								"mode": "enabled"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 505939057249600,
+							"parameters": {
+								"variable": "showText",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 680892873875908
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 461199319311230
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 288078277614710,
+							"parameters": {
+								"variable": "showText",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "L1storyBtn",
+							"sid": 703871820165418,
+							"parameters": {
+								"mode": "disabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "L1instructionsBtn",
+							"sid": 735799373607039,
+							"parameters": {
+								"mode": "disabled"
+							}
+						}
+					],
+					"sid": 931298299451117
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "mouse",
+					"sid": 814791085310073,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "L1infoClose"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "L1infoTxt",
+					"sid": 849626035284076,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "L1infoClose",
+					"sid": 869860767733751,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "L1infoBg",
+					"sid": 707524644358153,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "L1storyBtn",
+					"sid": 885669984314474,
+					"parameters": {
+						"mode": "enabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "L1instructionsBtn",
+					"sid": 400618629312826,
+					"parameters": {
+						"mode": "enabled"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 418701283219123,
+					"parameters": {
+						"variable": "showText",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 264939192976220
+		}
+	],
+	"sid": 362556566618360
+}

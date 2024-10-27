@@ -1,0 +1,298 @@
+{
+	"name": "intro",
+	"layers": [
+		{
+			"name": "Layer 0",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "TiledBackground3",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0,
+						"enable-tile-randomization": false,
+						"x-random": 1,
+						"y-random": 1,
+						"angle-random": 1,
+						"blend-margin-x": 0.1,
+						"blend-margin-y": 0.1
+					},
+					"uid": 663008,
+					"sid": 102959832274803,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 102959832274803,
+						"expanded": true
+					},
+					"world": {
+						"x": 0,
+						"y": 2,
+						"width": 854,
+						"height": 478,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "textintrobg",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 157892,
+					"sid": 524906273077453,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 524906273077453,
+						"expanded": true
+					},
+					"world": {
+						"x": 624,
+						"y": 241.5,
+						"width": 441,
+						"height": 476,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							0.5
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "IntroText",
+					"properties": {
+						"text": "After many years of efforts conducting research, humanity has begun to understand the phenomena that occur in the quantum realm, where particles and light waves intertwine in a ballet of uncertainty and infinite possibilities. \n\nÅngström is an intelligent nanobot designed to explore and conduct research in this subatomic plane, renowned for its ability to analyze patterns, manipulate waves, and adapt to the fluctuations of the quantum scale. Its mission is to investigate various phenomena occurring at atomic levels.\n\nWhile Ångström makes some predictions, it detects an unusual anomaly: a tardigrade that has been reduced to an incredibly tiny size of 1 nanometer, six orders of magnitude smaller than normal, due to a failed experiment. The tardigrade, known for its ability to survive in extreme conditions, is trapped at this atomic size and could have disastrous consequences both for the tardigrade and the ongoing experiments.\n\nKnowing this, Ångström decides to rescue it and minimize the effects of the failed experiment by returning it to its original size. To achieve this, Ångström needs to take it to a region of the quantum realm where the experiment can be reversed, a place called the Quantum Restitution Node. However, the path to this node is fraught with challenges. Every step is a risk, and time is limited as the tardigrade begins to show signs of quantum instability.\n",
+						"enable-bbcode": true,
+						"font": "Bahnschrift",
+						"size": 16,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 512541,
+					"sid": 543338961999316,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 543338961999316,
+						"expanded": true
+					},
+					"world": {
+						"x": 414,
+						"y": 479,
+						"width": 421,
+						"height": 942,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "StartButton",
+					"properties": {
+						"type": "button",
+						"text": "Start",
+						"tooltip": "",
+						"initially-visible": true,
+						"enabled": true,
+						"auto-font-size": true,
+						"checked": false,
+						"id": "",
+						"class": ""
+					},
+					"uid": 108765,
+					"sid": 828066955513213,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 828066955513213,
+						"expanded": true
+					},
+					"world": {
+						"x": 144,
+						"y": 408,
+						"width": 95,
+						"height": 26,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "angstromintro",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "intro",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 125824,
+					"sid": 235543988883894,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 235543988883894,
+						"expanded": true
+					},
+					"world": {
+						"x": 193,
+						"y": 164,
+						"width": 96,
+						"height": 128,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "tardigradeintro",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "intro",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 546870,
+					"sid": 114337189931294,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 114337189931294,
+						"expanded": true
+					},
+					"world": {
+						"x": 76,
+						"y": 85,
+						"width": 68.2,
+						"height": 70.8,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 286604641594334,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"scene-graphs-folder-root": {
+		"items": [],
+		"subfolders": []
+	},
+	"sid": 238582181163243,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 854,
+	"height": 480,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "perspective",
+	"eventSheet": "IntroEvents"
+}

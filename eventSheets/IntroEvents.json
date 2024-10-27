@@ -1,0 +1,121 @@
+{
+	"name": "IntroEvents",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "StartButton",
+					"sid": 600972253945194
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 226610954917936,
+					"parameters": {
+						"layout": "level_1"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 953332311796058,
+					"parameters": {
+						"tag": "\"intro-speech\""
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 647220529214467,
+					"parameters": {
+						"tag": "\"music-intro\""
+					}
+				}
+			],
+			"sid": 452926680792466
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 521618752446136
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 293030348211140,
+					"parameters": {
+						"audio-file": "music-intro",
+						"loop": "looping",
+						"volume": "-15",
+						"stereo-pan": "0",
+						"tag-optional": "\"music-intro\""
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "IntroText",
+					"sid": 992569783104891,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetY",
+						"end-value": "-1000",
+						"time": "95",
+						"ease": "noease",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 122735635436644,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 508107724383056,
+					"parameters": {
+						"audio-file": "interference_quest _introduction",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"intro-speech\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 418831922423850,
+					"parameters": {
+						"seconds": "37"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "tardigradeintro",
+					"sid": 665512730606323,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 286180650198187
+		}
+	],
+	"sid": 787336485551112
+}

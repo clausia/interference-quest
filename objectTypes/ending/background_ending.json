@@ -1,0 +1,22 @@
+{
+	"name": "background_ending",
+	"plugin-id": "TiledBg",
+	"sid": 262011560177477,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 854,
+		"height": 488,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 1572311,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

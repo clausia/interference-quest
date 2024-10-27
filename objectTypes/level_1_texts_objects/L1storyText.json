@@ -1,0 +1,15 @@
+{
+	"name": "L1storyText",
+	"plugin-id": "Text",
+	"sid": 605363462164149,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 154857254985745
+		}
+	],
+	"effectTypes": []
+}

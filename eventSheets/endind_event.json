@@ -1,0 +1,116 @@
+{
+	"name": "endind_event",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 244324107199801
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 836113199274248,
+					"parameters": {
+						"audio-file": "music_ending",
+						"loop": "looping",
+						"volume": "-18",
+						"stereo-pan": "0",
+						"tag-optional": "\"music_ending\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 224615189166451,
+					"parameters": {
+						"audio-file": "interference_quest_ending",
+						"loop": "not-looping",
+						"volume": "5",
+						"stereo-pan": "0",
+						"tag-optional": "\"ending_audio_speach\""
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "tardigrade",
+					"sid": 951503151804869,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"growTardigrade\"",
+						"property": "scale",
+						"end-x": "700",
+						"end-y": "700",
+						"time": "500",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "tardigrade",
+					"sid": 649610538224802,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"moveTardigrade\"",
+						"property": "position",
+						"end-x": "313",
+						"end-y": "-70",
+						"time": "300",
+						"ease": "noease",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 737480504029273
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "restart",
+					"sid": 136865763625986
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 183782952909294,
+					"parameters": {
+						"tag": "\"ending_audio_speach\""
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 129513779049983,
+					"parameters": {
+						"tag": "\"music_ending\""
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 733527307494144,
+					"parameters": {
+						"layout": "intro"
+					}
+				}
+			],
+			"sid": 839368271138402
+		}
+	],
+	"sid": 900767270724639
+}

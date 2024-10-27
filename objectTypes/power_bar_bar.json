@@ -1,0 +1,51 @@
+{
+	"name": "power_bar_bar",
+	"plugin-id": "Sprite",
+	"sid": 964536097544094,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 357,
+						"height": 26,
+						"originX": 0,
+						"originY": -0.2692307692307692,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1540546,
+						"collisionPoly": {
+							"points": [
+								0.0028011204481792717,
+								0.038461538461538464,
+								1,
+								0.038461538461538464,
+								1,
+								1,
+								0.0028011204481792717,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 837384112591693,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
